@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "宠物列表",
+  "usingComponents": {
+    "pet-card": "/components/pet-card/index",
+    "tab-switch": "/components/tab-switch/index",
+    "add-tag": "/components/add-tag/index"
+  }
+}

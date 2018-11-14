@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-radio": "/components/zanui/dist/radio/index",
+    "van-radio-group": "/components/zanui/dist/radio-group/index",
+    "van-cell": "/components/zanui/dist/cell/index",
+    "van-cell-group": "/components/zanui/dist/cell-group/index",
+    "pet-type": "/components/pet-type/index"
+  }
+}

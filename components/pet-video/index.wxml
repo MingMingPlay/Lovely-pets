@@ -1,0 +1,19 @@
+<video
+  controls='true'
+  objectFit='fill'
+  bindended='endvedio'
+  id='{{ petVideoData.id }}'
+  src='{{ petVideoData.name }}'>
+</video>
+<cover-image
+  wx:if='{{ closed }}'
+  bindtap='deletePhoto'
+  data-index='{{ petVideoIndex }}'
+  src='{{ closeImg }}'
+  class='icon-color'/>
+<cover-view wx:if='{{ show }}' class='video-cover-img' style='top: {{ top }}rpx'>
+  <cover-image mode='widthFix' src='{{ posterImg }}'></cover-image>
+  <cover-view class='video-play-btn' bindtap='playVideo' data-id='{{ petVideoData.id }}'>
+    <cover-image src='{{ posterImg }}'></cover-image>
+  </cover-view>
+</cover-view>

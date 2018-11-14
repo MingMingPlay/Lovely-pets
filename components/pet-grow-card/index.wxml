@@ -1,0 +1,16 @@
+<view class='pet-growth-list'>
+  <view class='pet-growth-item'>
+    <view class='pet-circuler-point'>
+      <view class='pet-circuler-pitem'></view>
+    </view>
+    <view class='pet-growth-iage'>
+      <text>{{ growData.age }}</text>
+    </view>
+    <view>
+      <view wx:for='{{ growData.picArr }}' wx:key='{{ index }}' class='pet-growth-photo'>
+        <pet-photo wx:if='{{ item.type == "au"}}' petPhotoData='{{ item }}' closed='{{ false }}'></pet-photo>
+        <pet-video wx:else petVideoData='{{ item }}' top='{{ -332 }}' closed='{{ false }}'></pet-video>
+      </view>
+    </view>
+  </view>
+</view>

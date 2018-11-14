@@ -1,0 +1,43 @@
+.pet-card {
+  width: 750rpx;
+  height: 178rpx;
+  background-color: rgba(255,255,255,1);
+  border-bottom: .25rpx solid rgba(221,221,221,1);
+}
+.pet-photo {
+  width: 244rpx;
+  height: 138rpx;
+  border-radius: 6rpx;
+  margin-top: 5rpx;
+}
+.pet-photo image {
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.pet-name {
+  height: 41rpx;
+  font-size: 33rpx;
+  font-weight: 400;
+  color: rgba(0,0,0,1);
+  line-height: 41rpx;
+}
+.pet-age {
+  height: 41rpx;
+  font-size: 28rpx;
+  font-weight: 400;
+  color: rgba(136,136,136,1);
+  line-height: 41rpx;
+  margin: 5rpx 0;
+}
+.pet-number {
+  height: 38rpx;
+  font-size: 24rpx;
+  font-weight: 400;
+  color: rgba(187,187,187,1);
+  line-height: 38rpx;
+}
+.pet-mar-left {
+  margin-left: 65rpx;
+}

@@ -1,0 +1,13 @@
+<view class='shop-card' bindtap='toShopDetail' data-shopId='{{shopData.id}}'>
+  <view class='shop-img'>
+    <image src='../../static/img/labuladuo.jpg'></image>
+  </view>
+  <view class='shop-name-part'>
+    <view class='shop-name'>
+      <text>{{shopData.name}}</text>
+    </view>
+    <view class='shop-visited-time'>
+      <text class='visited-time-label'>{{shopData.visitedTime}}</text>
+    </view>
+  </view>
+</view>

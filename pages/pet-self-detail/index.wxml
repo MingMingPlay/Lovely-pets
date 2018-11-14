@@ -1,0 +1,133 @@
+<!-- 宠物售卖状态 -->
+<van-cell-group custom-class='pet-self-group'>
+  <van-cell custom-class='pet-self-cell'>
+    <view slot='title'>
+      <text class='pet-self-title'>在售</text>
+    </view>
+    <van-switch
+      size='45rpx'
+      data-type='0'
+      checked='{{ saleChecked }}'
+      bind:change='checkChange' />
+    </van-cell>
+</van-cell-group>
+<!-- 宠物基本信息 -->
+<van-cell-group custom-class='pet-self-group'>
+  <van-cell
+    custom-class='pet-self-cell'
+    value-class='pet-self-value'
+    value='{{ petType }}'
+    data-type='petType'
+    bind:click='toPetModify'
+    is-link>
+    <view slot='title'>
+      <text class='pet-self-title'>品种</text>
+    </view>
+  </van-cell>
+  <van-cell
+    custom-class='pet-self-cell'
+    value-class='pet-self-value'
+    value='{{ petBirthday }}'
+    data-type='petBirthday'
+    data-value='{{ petBirthday }}'
+    bind:click='toPetModify'
+    is-link>
+    <view slot='title'>
+      <text class='pet-self-title'>生日</text>
+    </view>
+  </van-cell>
+  <van-cell
+    custom-class='pet-self-cell'
+    value-class='pet-self-value'
+    value='{{ petSex == "0" ? "未知" : petSex == "1" ? "弟弟" : "妹妹" }}'
+    data-type='petSex'
+    data-value='{{ petSex }}'
+    bind:click='toPetModify'
+    is-link>
+    <view slot='title'>
+      <text class='pet-self-title'>性别</text>
+    </view>
+  </van-cell>
+  <van-cell
+    custom-class='pet-self-cell'
+    value-class='pet-self-value'
+    value='{{ petWeight }}'
+    data-type='petWeight'
+    data-value='{{ petWeight }}'
+    bind:click='toPetModify'
+    is-link>
+    <view slot='title'>
+      <text class='pet-self-title'>体重(kg)</text>
+    </view>
+  </van-cell>
+  <van-cell
+    custom-class='pet-self-cell'
+    value-class='pet-self-value'
+    value='{{ petPhotos }}'
+    bind:click='toPetPhotos'
+    is-link
+    border='{{ false }}'>
+    <view slot='title'>
+      <text class='pet-self-title'>照片&视频</text>
+    </view>
+  </van-cell>
+</van-cell-group>
+<!-- 宠物介绍 -->
+<van-cell-group custom-class='pet-self-group'>
+  <van-cell custom-class='pet-self-cell' border='{{ false }}'>
+    <view slot='title'>
+      <text class='pet-self-title'>介绍</text>
+    </view>
+    <van-switch
+      size='45rpx'
+      data-type='1'
+      checked='{{ desChecked }}'
+      bind:change='checkChange' />
+  </van-cell>
+</van-cell-group>
+<van-cell-group wx:if='{{ desChecked }}'> 
+  <van-cell
+    custom-class='pet-self-cell'
+    value-class='pet-self-value'
+    value='{{ petDes.length > 7 ? petSortDes : petDes }}'
+    data-type='petDes'
+    data-value='{{ petDes }}'
+    bind:click='toPetModify'
+    is-link
+    border='{{ false }}'>
+    <view slot='title'>
+      <text class='pet-self-title'>介绍</text>
+    </view>
+  </van-cell>
+</van-cell-group>
+<!-- 宠物成长经历 -->
+<van-cell-group custom-class='pet-self-group'>
+  <van-cell custom-class='pet-self-cell' border='{{ false }}'>
+    <view slot='title'>
+      <text class='pet-self-title'>成长经历</text>
+    </view>
+    <van-switch
+      size='45rpx'
+      data-type='2'
+      checked='{{ growChecked }}'
+      bind:change='checkChange' />
+  </van-cell>
+</van-cell-group>
+<van-cell-group wx:if='{{ growChecked }}'>
+  <van-cell 
+    wx:for='{{ petGrows }}' 
+    wx:key='{{ index }}' 
+    data-value='{{ item }}' 
+    bind:click='addPetGrow' 
+    custom-class='pet-self-cell' 
+    is-link>
+    <view slot='title'>
+      <text class='pet-self-title'>{{ item }}</text>
+    </view>
+  </van-cell>
+  <van-cell custom-class='pet-self-cell' bind:click='addPetGrow'>
+    <view class='pet-group-add'>
+      <text>+添加</text>
+    </view>
+  </van-cell>
+</van-cell-group>

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "pet-video": "/components/pet-video/index",
+    "pet-photo": "/components/pet-photo/index"
+  }
+}

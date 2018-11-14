@@ -1,0 +1,12 @@
+<view class='swiper-tab'>
+  <view class='swiper-tab-list' data-current='0' bindtap='swichNav'>
+    <view class='tab-label {{currentTab == "0" ? "on" : ""}}'>
+      {{ tabData[0] }}
+    </view>
+  </view>
+  <view class='swiper-tab-list' data-current='1' bindtap='swichNav'>
+    <view class='tab-label {{currentTab == "1" ? "on" : ""}}'>
+      {{ tabData[1] }}
+    </view>
+  </view>
+</view>

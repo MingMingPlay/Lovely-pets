@@ -1,0 +1,61 @@
+/**index.wxss**/
+.userinfo {
+  width: 710rpx;
+  height: 120rpx;
+  background: rgba(255,255,255,1);
+  border-radius: 8rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.user-head-photo {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  border: 1px solid red;
+  margin-left: 22rpx;
+}
+.user-head-photo image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.user-nickname {
+  height: 44rpx;
+  font-size: 40rpx;
+  font-weight: 500;
+  color: rgba(68,78,83,1);
+  line-height: 44rpx;
+  margin-left: 16rpx;
+}
+.own-shop-part {
+  position: fixed;
+  bottom: 50rpx;
+  right: 34rpx;
+}
+.own-shop-btn {
+  float: right;
+  width: 120rpx;
+  height: 120rpx;
+  background: rgba(59,184,58,1);
+  box-shadow: 0 6rpx 12rpx 0 rgba(0,0,0,0.4);
+  border-radius: 50%;
+}
+.home-icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.home-icon-text {
+  font-size: 24rpx;
+  font-weight: 400;
+  color: rgba(255,255,255,1);
+  line-height: 34rpx;
+}
+.pet-login-btn {
+  font-size: 28rpx;
+  padding: 0 20rpx;
+  margin-top: -10rpx;
+}

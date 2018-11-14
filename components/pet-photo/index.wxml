@@ -1,0 +1,7 @@
+<image src='{{ petPhotoData.name }}' class='slide-image'/>
+<cover-image
+  wx:if='{{ closed }}'
+  bindtap='deletePhoto'
+  data-index='{{ petPhotoIndex }}'
+  src='{{ closeImg }}'
+  class='icon-color'/>

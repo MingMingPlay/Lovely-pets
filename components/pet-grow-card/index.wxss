@@ -1,0 +1,46 @@
+.pet-growth-list {
+  width: 100%;
+}
+.pet-growth-item {
+  width: 100%;
+  border-left: 4rpx solid #A7E2D4; 
+  overflow: hidden;
+  padding: 58rpx 0;
+}
+.pet-circuler-point {
+  width: 30rpx;
+  height: 30rpx;
+  background: rgba(226,248,242,1);
+  border: 2px solid #8DDBC7;
+  border-radius: 50%;
+  position: absolute;
+  margin: -88rpx 0 0 -20rpx;
+}
+.pet-circuler-pitem {
+  border-radius: 50%;
+  position: relative;
+  width: 9px;
+  height: 9px;
+  background: #00AE83;
+  top: 6rpx;
+  left: 6rpx;
+}
+.pet-growth-iage {
+  height: 40rpx;
+  font-size: 28rpx;
+  font-weight: 400;
+  color: rgba(136,136,136,1);
+  line-height: 40rpx;
+  position: absolute;
+  margin: -88rpx 0 0 72rpx;
+}
+.pet-growth-photo {
+  position: relative;
+  width: 568rpx;
+  height: 322rpx;
+  margin: 0 0 20rpx 80rpx;
+}
+.pet-growth-photo image {
+  width: 100%;
+  height: 100%;
+}

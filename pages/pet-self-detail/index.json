@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-cell": "/components/zanui/dist/cell/index",
+    "van-cell-group": "/components/zanui/dist/cell-group/index",
+    "van-switch": "/components/zanui/dist/switch/index"
+  }
+}

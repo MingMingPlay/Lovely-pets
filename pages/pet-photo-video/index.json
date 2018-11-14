@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "照片&视频",
+  "usingComponents": {
+    "add-tag": "/components/add-tag/index",
+    "pet-video": "/components/pet-video/index",
+    "pet-photo": "/components/pet-photo/index"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "宠物家",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "pet-card": "/components/pet-card/index",
+    "shop-box": "/components/shop-box/index",
+    "bottom-bounce": "/components/bottom-bounce/index"
+  }
+}

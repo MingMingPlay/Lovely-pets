@@ -1,0 +1,6 @@
+.pet-list {
+  width: 100%;
+}
+.pet-list-main {
+  width: 100%;
+}

@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view class='container'>
+  <view class='userinfo'>
+    <view class='user-head-photo'>
+      <image src='{{ userInfo.avatarUrl }}'></image>
+    </view>
+    <view class='user-nickname'>
+      <text wx:if='{{ userInfo.nickName }}'>{{ userInfo.nickName }}</text>
+      <button 
+        wx:if="{{ canIUse && !userInfo.nickName}}" 
+        open-type="getUserInfo" 
+        bindgetuserinfo="getUserDataInfo" 
+        class='pet-login-btn'>
+        点击登录
+      </button>
+    </view>
+  </view>
+  <view>
+    <shop-card bindshopDetail='toShopDetail' wx:for='{{shopList}}' shopData='{{item}}' wx:key='{{ index }}'></shop-card>
+  </view>
+  <view class='own-shop-part' bindtap='toShopDetail'>
+    <view class='own-shop-btn'>
+      <view class='home-icon'>
+        <van-icon name="wap-home" color='rgba(255,255,255,1)' size='50rpx' custom-style='margin-top: 18rpx'/>
+      </view>
+      <view class='home-icon'>
+        <text class='home-icon-text'>我的</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "宠物家",
+  "usingComponents": {
+    "grow-card": "/components/pet-grow-card/index",
+    "bottom-bounce": "/components/bottom-bounce/index",
+    "pet-video": "/components/pet-video/index",
+    "pet-photo": "/components/pet-photo/index"
+  }
+}

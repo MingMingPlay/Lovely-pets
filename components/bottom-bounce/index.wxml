@@ -1,0 +1,28 @@
+<view wx:if='{{ showed }}' class='bottom-bounce' catchtouchmove="myCatchTouch">
+  <view class='bottom-bounce-main bottom-pos' animation="{{animationData}}">
+    <view class='bottom-share-part'>
+      <!-- 微信分享 -->
+      <view class='bottom-share-item'>
+        <view class='bottom-share-icon'>
+          <image src='{{ wxPhoto }}'></image>
+        </view>
+        <view class='bottom-share-name'>
+          <text>微信</text>
+        </view>
+      </view>
+      <button class='btn-mask' open-type="share" bindtap='clickShare'></button>
+      <!-- 海报生成 -->
+      <view class='bottom-share-item' bindtap='createPoster'>
+        <view class='bottom-share-icon'>
+          <image src='{{ shopPhoto }}'></image>
+        </view>
+        <view class='bottom-share-name'>
+          <text>店铺海报</text>
+        </view>
+      </view>
+    </view>
+    <view class='bottom-close-btn' bindtap='closeShareBox'>
+      <text>取消</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+<van-card
+  custom-class='pet-card'
+  centered='true'
+  data-petId='{{ petData.id }}'
+  bindtap='toPetDetail'> 
+  <view slot='thumb' class='pet-photo'>
+    <image src='{{ imageURL }}'></image>
+  </view>
+  <view slot='title' class='pet-mar-left'>
+    <text class='pet-name'>{{ petData.name }}</text>
+  </view>
+  <view slot='desc' class='pet-mar-left'>
+    <view class='pet-age'>
+      <view style='float: left;'>
+        {{ petData.age }} | {{ petData.sex ? (petData.sex == 1 ? '弟弟' : '妹妹') : '未知' }}
+      </view>
+      <view style='float: right;'>
+        <van-icon name="arrow"/>
+      </view>
+    </view>
+    <view class='pet-number'>{{ petData.number }}</view>
+  </view>
+</van-card>

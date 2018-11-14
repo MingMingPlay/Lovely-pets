@@ -1,0 +1,97 @@
+{
+	"description": "宠物家",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.3.0",
+	"appid": "wx6dd6e4a0d331c267",
+	"projectname": "pet-house",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 8,
+			"list": [
+				{
+					"id": -1,
+					"name": "宠物家列表",
+					"pathName": "pages/pet-shop-list/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "宠物列表",
+					"pathName": "pages/pet-list/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "海报",
+					"pathName": "pages/poster-card/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "宠物详情",
+					"pathName": "pages/pet-detail/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "宠物档案",
+					"pathName": "pages/pet-self-detail/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "宠物信息修改",
+					"pathName": "pages/pet-info-modify/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "宠物照片视频",
+					"pathName": "pages/pet-photo-video/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "添加宠物",
+					"pathName": "pages/pet-add/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "添加宠物成长经历",
+					"pathName": "pages/pet-add-grow/index"
+				}
+			]
+		}
+	}
+}

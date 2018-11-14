@@ -1,0 +1,56 @@
+.pet-modify-margin {
+  margin-top: 20rpx;
+}
+.pet-modify-title {
+  font-size: 34rpx;
+  font-weight: 400;
+  color: rgba(0,0,0,1);
+}
+.pet-modify-input {
+  height: 40rpx;
+  font-size: 28rpx;
+  font-weight: 400;
+  color: rgba(136,136,136,1);
+  line-height: 40rpx;
+  margin-left: 36rpx;
+}
+.pet-modify-picker {
+  width: 690rpx;
+  height: 40rpx;
+  font-size: 28rpx;
+  font-weight: 400;
+  line-height: 40rpx;
+  margin-left: 26rpx;
+  padding: 20rpx 10rpx;
+  background-color: #fff;
+}
+.pet-picker-text::before {
+  content: '宠物生日: ';
+  color: #000;
+  margin-right: 10rpx;
+}
+.pet-picker-text {
+  color: rgba(136,136,136,1);
+}
+.pet-modify-textarea {
+  width: 730rpx;
+  height: 150rpx;
+  background: #fff;
+  padding: 20rpx;
+  color: #888888;
+  font-size: 28rpx;
+  box-shadow: 0 -2rpx 0 0 rgba(229,229,229,1),0 2rpx 0 0 rgba(229,229,229,1);
+}
+.pet-modify-placeholder {
+  height: 40rpx;
+  font-size: 28rpx;
+  font-weight: 400;
+  color: #888888;
+  line-height: 40rpx;
+}
+.pet-textarea-count {
+  text-align: right;
+  color: #888888;
+  font-size: 24rpx; 
+  margin: 10rpx 20rpx 0 0;
+}

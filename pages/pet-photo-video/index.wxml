@@ -1,0 +1,23 @@
+<view class='pet-photo'>
+  <view class='pet-photo-title'>
+    <text>已上传：{{ photoList.length }}/{{ petPhotoMax }}</text>
+  </view>
+  <view class='pet-photo-part'>
+    <view wx:for='{{ photoList }}' class='pet-photo-item' wx:key='{{ index }}'>
+      <pet-photo
+        wx:if='{{ item.type == "au"}}'
+        petPhotoData='{{ item }}'
+        petPhotoIndex='{{ index }}'
+        binddeleteIndex='deletePhoto'>
+      </pet-photo>
+      <pet-video
+       wx:else
+       top='{{ -190 }}'
+       petVideoData='{{ item }}'
+       petVideoIndex='{{ index }}'
+       binddeleteIndex='deletePhoto'>
+      </pet-video>
+    </view>
+  </view>
+  <add-tag bindclickEvent='toAddPetPhoto'></add-tag>
+</view>

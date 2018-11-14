@@ -1,0 +1,62 @@
+<view wx:if='{{ modifyType != "petType" }}' class='pet-modify-margin'>
+  <!-- 性别修改 -->
+  <van-radio-group wx:if='{{ modifyType == "petSex" }}' value='{{ petSex }}' bind:change='petSexSelect'>
+    <van-cell-group>
+      <van-cell clickable data-name='1'>
+        <view slot='title'>
+          <text class='pet-modify-title'>弟弟</text>
+        </view>
+        <van-radio name='1' />
+      </van-cell>
+      <van-cell clickable data-name='2'>
+        <view slot='title'>
+          <text class='pet-modify-title'>妹妹</text>
+        </view>
+        <van-radio name='2' />
+      </van-cell>
+    </van-cell-group>
+  </van-radio-group>
+  <!-- 体重修改 -->
+  <input
+    wx:if='{{ modifyType == "petWeight" }}'
+    class='pet-modify-input'
+    bindinput='checkNumberType'
+    type='number'
+    value='{{ petWeight }}'
+    placeholder='请输入体重（仅限数字，单位 kg）'/>
+  <!-- 生日修改 -->
+  <picker 
+    wx:if='{{ modifyType == "petBirthday" }}' 
+    mode='date' value='{{petBirthday}}' 
+    start='2015-09-01' 
+    bindchange='petBirthdayModify'>
+    <view class='pet-modify-picker'>
+      <text class='pet-picker-text'>{{petBirthday}}</text>
+    </view>
+  </picker>
+  <!-- 介绍修改 -->
+  <view wx:if='{{ modifyType == "petDes" }}'>
+    <textarea
+      class='pet-modify-textarea'
+      bindinput="petDesModify"
+      value='{{ petDes }}'
+      maxlength='{{ petDesMax }}'
+      placeholder-class='pet-modify-placeholder'
+      placeholder="请输入宠物介绍" />
+    <view class='pet-textarea-count'>
+      <text>{{ petDes.length || 0 }}/{{ petDesMax }}</text>
+    </view>
+  </view>
+  <view class='pet-common-btn' bindtap='submitModifyInfo'>
+    <text>确定</text>
+  </view>
+</view>
+<!-- 品种修改 -->
+<view wx:else>
+  <pet-type 
+    wx:if='{{ modifyType == "petType" }}' 
+    bindswitchPet='switchPet' 
+    bindgetType='getPetType' 
+    petTypeData='{{ petType }}'>
+  </pet-type>
+</view>

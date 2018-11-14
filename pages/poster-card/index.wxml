@@ -1,0 +1,41 @@
+<view class='poster-card'>
+  <view class='poster-card-main'>
+    <view class='poster-card-img'>
+      <image src='{{ imgSrc }}'></image>
+    </view>
+    <view class='poster-card-content'>
+      <view class='poster-des-icon poster-des-before'>
+        <!-- <image src=''></image> -->
+        <text>"</text>
+      </view>
+      <view class='poster-card-des'>
+        <text>良心商家，全部喵都接种了疫苗；可寄养，医治宠物。商家描述信息商家描述信息商家描述信息商家描述信息商家描述信息。</text>
+      </view>
+      <view class='poster-des-icon poster-des-after'>
+        <text>"</text>
+      </view>
+    </view>
+    <view class='poster-self-info'>
+      <view class='poster-self-item'>
+        <view class='poster-self-name'>
+          <text>噜啦噜娜宠物店</text>
+        </view>
+        <view class='poster-self-addr'>
+          <text>四川 成都</text>
+        </view>
+        <view class='poster-self-pets'>
+          <text>共有 23 只萌宠</text>
+        </view>
+      </view>
+      <view class='poster-self-item'>
+        <view class='poster-self-qrcode'>
+          <image src='{{ imgSrc }}'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='poster-created-btn' bindtap='saveImg'>
+  <text>保存店铺海报分享到朋友圈</text>
+</view>
+<canvas canvas-id='share' style='width:100vw;height:90vh;' hidden='{{canvasHidden}}'></canvas> 

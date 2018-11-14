@@ -1,0 +1,10 @@
+.icon-color {
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  margin-left: 275rpx;
+  z-index: 999;
+  margin-top: -205rpx;
+  border-radius: 50%;
+  border: 1rpx solid red;
+}

@@ -1,0 +1,5 @@
+<view>
+  <tab-switch bindtabEvent='getPetTypes' tabData='{{ tabData }}'></tab-switch>
+  <import src="../../utils/wxaSortPicker/wxaSortPicker.wxml"/> 
+  <template is="wxaSortPicker" data="{{wxaSortPickerData,dataType}}"/>
+</view>

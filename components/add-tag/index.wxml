@@ -1,0 +1,5 @@
+<view class='add-tag' bindtap='clickEvent'>
+  <view class='add-tag-icon'>
+    <image src='{{ iconPath }}'></image>
+  </view>
+</view>

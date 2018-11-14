@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "添加成长经历",
+  "usingComponents": {
+    "van-cell": "/components/zanui/dist/cell/index",
+    "van-cell-group": "/components/zanui/dist/cell-group/index",
+    "pet-video": "/components/pet-video/index",
+    "pet-photo": "/components/pet-photo/index"
+  }
+}

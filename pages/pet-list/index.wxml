@@ -1,0 +1,10 @@
+<view class='pet-list'>
+  <!-- tab -->
+  <tab-switch bindtabEvent='tabSwitchGetPets' tabData='{{ tabData }}'></tab-switch>
+  <!-- 宠物列表 -->
+  <view class='pet-list-main'>
+    <pet-card bindpetDetail='toPetDetail' wx:for='{{ petList }}' wx:key='{{ index }}' petData='{{ item }}'></pet-card>
+  </view>
+  <!-- 添加宠物按钮 -->
+  <add-tag bindclickEvent='toAddPet'></add-tag>
+</view>

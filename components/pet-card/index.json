@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-card": "/components/zanui/dist/card/index",
+    "van-icon": "/components/zanui/dist/icon/index"
+  }
+}

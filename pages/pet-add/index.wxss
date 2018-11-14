@@ -1,0 +1,7 @@
+.pet-add {
+  width: 100%;
+  background-color: #fff;
+}
+.pet-add-group {
+  margin-top: 11rpx;
+}

@@ -1,0 +1,122 @@
+<view class='pet-detail'>
+  <!-- 宠物视频图片轮播 -->
+  <view class='pet-photos'>
+    <view class='pet-photos-share' bindtap='sharePetInfo'></view>
+    <view wx:if='{{ false }}' bindtap='playVedio' class='pet-video-play'></view>
+    <swiper
+      class='pet-swiper'
+      indicator-dots='{{ indicatorDots }}'
+      circular='{{ circular }}'
+      current='{{ swiperCurrent }}'
+      duration='{{ duration }}'
+      bindchange="swiperChange">
+      <block wx:for='{{ imgUrls }}' wx:key='{{ index }}'>
+        <swiper-item item-id='{{ item.type }}'>
+          <pet-photo wx:if='{{ item.type == "au"}}' petPhotoData='{{ item }}' closed='{{ false }}'></pet-photo>
+          <pet-video wx:else petVideoData='{{ item }}' top='{{ -435 }}' closed='{{ false }}'></pet-video>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='pet-photos-num'>
+      <text>{{ swiperCurrent + 1 }}/{{ imgUrls.length }}</text>
+    </view>
+  </view>
+  <!-- 基本信息 -->
+  <view class='pet-base-info'>
+    <view class='pet-base-content'>
+      <view class='pet-info-title'>
+        <text>基本信息</text>
+      </view>
+      <view class='pet-base-part'>
+        <view class='pet-base-item'>
+          <view class='pet-item-tname'>
+            <text>品种</text>
+          </view>
+          <view class='pet-item-tvalue'>
+            <text>橘猫</text>
+          </view>
+        </view>
+        <view class='pet-base-item'>
+          <view class='pet-item-tname'>
+            <text>年龄</text>
+          </view>
+          <view class='pet-item-tvalue'>
+            <text>0岁5个月</text>
+          </view>
+        </view>
+        <view class='pet-base-item'>
+          <view class='pet-item-tname'>
+            <text>性别</text>
+          </view>
+          <view class='pet-item-tvalue'>
+            <text>弟弟</text>
+          </view>
+        </view>
+      </view>
+      <view class='pet-base-part'>
+        <view class='pet-base-item'>
+          <view class='pet-item-tname'>
+            <text>体重</text>
+          </view>
+          <view class='pet-item-tvalue'>
+            <text>3.0kg</text>
+          </view>
+        </view>
+        <view class='pet-base-item'>
+          <view class='pet-item-tname'>
+            <text>级别</text>
+          </view>
+          <view class='pet-item-tvalue'>
+            <text>宠物级</text>
+          </view>
+        </view>
+        <view class='pet-base-item'>
+          <view class='pet-item-tname'>
+            <text>免疫驱虫</text>
+          </view>
+          <view class='pet-item-tvalue'>
+            <text>已完成</text>
+          </view>
+        </view>
+      </view>
+      <view class='pet-base-part'>
+        <view class='pet-base-item'>
+          <view class='pet-item-tname'>
+            <text>血统</text>
+          </view>
+          <view class='pet-item-tvalue'>
+            <text>无血统证书</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 介绍 -->
+  <view class='pet-des'>
+    <view class='pet-base-content'>
+      <view class='pet-info-title'>
+        <text>介绍</text>
+      </view>
+      <view class='pet-des-wrap'>
+        <text>乳色，五粉掌垫，性格好，粘人；宠物介绍宠物介绍宠物介绍宠物介绍宠物介绍宠物介绍宠物介绍宠物介绍宠物介绍宠物介绍</text>
+      </view>
+    </view>
+  </view>
+  <!-- 成长经历 -->
+  <view class='pet-growth'>
+    <view class='pet-base-content'>
+      <view class='pet-info-title pet-growth-mbootom'>
+        <text>成长经历</text>
+      </view>
+      <grow-card wx:for='{{ growList }}' growData='{{ item }}' wx:key='{{ index }}'></grow-card>
+    </view>
+  </view>
+  <!-- 分享底部弹框 -->
+  <bottom-bounce 
+    wx:if='{{ shareShowed }}'
+    showed='{{ shareShowed }}'
+    bindcreatePoster='createPoster' 
+    bindcloseShare='closeShareBox' 
+    bindclickShare='clickShare'>
+  </bottom-bounce>
+</view>

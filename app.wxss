@@ -1,0 +1,43 @@
+/**app.wxss**/
+page{
+  background-color: #F5F5F5;
+  height: 100%;
+}
+.container {
+  height: 100%;
+  box-sizing: border-box;
+  margin-bottom: 50rpx;
+}
+/** 宠物详情公共样式 **/
+.pet-self-title {
+  font-size: 34rpx;
+  font-weight: 400;
+  color: #000;
+  line-height: 45rpx;
+}
+.pet-self-cell {
+  width: 100%;
+  height: 90rpx;
+  background: rgba(255,255,255,1);
+}
+.pet-self-value {
+  font-size: 34rpx;
+  font-weight: 400;
+  color:rgba(136,136,136,1);
+  line-height: 45rpx;
+}
+/** 按钮通用样式 **/
+.pet-common-btn {
+  width: 690rpx;
+  height: 84rpx;
+  background: #1AAD19;
+  border-radius: 8rpx;
+  border: 2rpx solid #1AAD19;
+  margin: 0 auto;
+  margin-top: 38rpx;
+  font-size: 34rpx;
+  font-weight: 400;
+  color:#fff;
+  line-height: 84rpx;
+  text-align: center;
+}

@@ -1,0 +1,73 @@
+<view class='pet-add'>
+  <van-cell-group custom-class='pet-add-group'>
+    <van-cell
+      custom-class='pet-self-cell'
+      value-class='pet-self-value'
+      value='根据品种自动生成'>
+      <view slot='title'>
+        <text class='pet-self-title'>编号</text>
+      </view>
+    </van-cell>
+    <van-cell
+      custom-class='pet-self-cell'
+      value-class='pet-self-value'
+      value='{{ petType || "点击选择" }}'
+      data-type='petType'
+      bind:click='toPetModify'
+      is-link>
+      <view slot='title'>
+        <text class='pet-self-title'>品种</text>
+      </view>
+    </van-cell>
+    <van-cell
+      custom-class='pet-self-cell'
+      value-class='pet-self-value'
+      value='{{ petBirthday || "点击选择" }}'
+      data-type='petBirthday'
+      data-value='{{ petBirthday }}'
+      bind:click='toPetModify'
+      is-link>
+      <view slot='title'>
+        <text class='pet-self-title'>生日</text>
+      </view>
+    </van-cell>
+    <van-cell
+      custom-class='pet-self-cell'
+      value-class='pet-self-value'
+      value='{{ petSex == "0" ? "未知" : petSex == "1" ? "弟弟" : "妹妹" }}'
+      data-type='petSex'
+      data-value='{{ petSex }}'
+      bind:click='toPetModify'
+      is-link>
+      <view slot='title'>
+        <text class='pet-self-title'>性别</text>
+      </view>
+    </van-cell>
+    <van-cell
+      custom-class='pet-self-cell'
+      value-class='pet-self-value'
+      value='{{ petWeight || "点击填写" }}'
+      data-type='petWeight'
+      data-value='{{ petWeight }}'
+      bind:click='toPetModify'
+      is-link>
+      <view slot='title'>
+        <text class='pet-self-title'>体重(kg)</text>
+      </view>
+    </van-cell>
+    <van-cell
+      custom-class='pet-self-cell'
+      value-class='pet-self-value'
+      value='{{ petPhotos || "点击上传" }}'
+      bind:click='toPetPhotos'
+      is-link
+      border='{{ false }}'>
+      <view slot='title'>
+        <text class='pet-self-title'>照片&视频</text>
+      </view>
+    </van-cell>
+  </van-cell-group>
+  <view class='pet-common-btn' bindtap='addPet'>
+    <text>创建</text>
+  </view>
+</view>

@@ -1,0 +1,62 @@
+<view wx:if='{{ showed }}' class='shop-box' catchtouchmove="myCatchTouch">
+  <view class='shop-box-main'>
+    <view class='shop-box-title'>
+      <text>宠物家信息</text>
+    </view>
+    <van-icon 
+      name="close"
+      color='rgba(136,136,136,1)'
+      size='40rpx'
+      bind:click= 'clickConfirmBtn'
+      custom-style='position: absolute;margin-top: -40rpx;right: 22rpx'/>
+    <view class='shop-box-content'>
+      <view class='shop-box-item'>
+        <view class='box-item-label'>
+          <text>电话</text>
+        </view>
+        <view class='box-item-value'>
+          <text>{{ shopBoxData.mobile }}</text>
+        </view>
+        <view class='box-item-btn' bindtap='mobileCall' data-numbers='{{ shopBoxData.mobile }}'>
+          <text>拨打</text>
+        </view>
+      </view>
+      <view class='shop-box-item'>
+        <view class='box-item-label'>
+          <text>微信</text>
+        </view>
+        <view class='box-item-value'>
+          <text>{{ shopBoxData.wx }}</text>
+        </view>
+        <view class='box-item-btn' data-texts='{{ shopBoxData.wx }}' bindtap='copyContent'>
+          <text>复制</text>
+        </view>
+      </view>
+      <view class='shop-box-item'>
+        <view class='box-item-label'>
+          <text>店铺</text>
+        </view>
+        <view class='box-item-value'>
+          <text>{{ shopBoxData.shopName }}</text>
+        </view>
+        <view class='box-item-btn' data-texts='{{ shopBoxData.shopName }}' bindtap='copyContent'>
+          <text>复制</text>
+        </view>
+      </view>
+      <view class='shop-box-item'>
+        <view class='box-item-label'>
+          <text>地址</text>
+        </view>
+        <view class='box-item-value'>
+          <text>{{ shopBoxData.shopAddr }}</text>
+        </view>
+        <view class='box-item-btn' data-texts='{{ shopBoxData.shopAddr }}' bindtap='copyContent'>
+          <text>复制</text>
+        </view>
+      </view>
+    </view>
+    <view class='shop-box-footer' bindtap='clickConfirmBtn'>
+      <text>确定</text>
+    </view>
+  </view>
+</view>

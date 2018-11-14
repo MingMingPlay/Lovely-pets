@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "宠物家列表",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "shop-card": "/components/shop-card/index",
+    "van-icon": "/components/zanui/dist/icon/index"
+  }
+}

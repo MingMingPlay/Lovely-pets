@@ -1,0 +1,20 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/pet-add/index",
+    "pages/pet-add-grow/index",
+    "pages/pet-detail/index",
+    "pages/pet-info-modify/index",
+    "pages/pet-list/index",
+    "pages/pet-photo-video/index",
+    "pages/pet-self-detail/index",
+    "pages/pet-shop-list/index",
+    "pages/poster-card/index"
+  ],
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "宠物家",
+    "navigationBarTextStyle": "white"
+  }
+}

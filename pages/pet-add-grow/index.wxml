@@ -1,0 +1,57 @@
+<view class='pet-add-grow'>
+  <van-cell-group>
+    <van-cell
+      custom-class='pet-self-cell'
+      value-class='pet-self-value'
+      value='{{ petBirthday || "点击选择" }}'
+      data-type='petBirthday'
+      data-value='{{ petBirthday }}'
+      bind:click='toPetModify'
+      is-link='{{ petBirthday ? false : true }}'>
+      <view slot='title'>
+        <text class='pet-self-title'>选择日期</text>
+      </view>
+    </van-cell>
+  </van-cell-group>
+  <view class='pet-grow-wrap'>
+    <!-- 没有照片或视频 -->
+    <view wx:if='{{ true }}' class='pet-grow-item'>
+      <view class='pet-grow-title'>
+        <text>内容</text>
+      </view>
+      <view class='grow-add-icon' bindtap='getPhoto'></view>
+    </view>
+    <!-- 有照片视频 -->
+    <view wx:else class='pet-grow-main'>
+      <view class='pet-grow-title'>
+        <text>内容</text>
+      </view>
+      <view class='pet-grow-item'>
+        <view wx:for='{{ photoList }}' class='pet-photo-item' wx:key='{{ index }}'>
+          <pet-photo
+            wx:if='{{ item.type == "au"}}'
+            petPhotoData='{{ item }}'
+            petPhotoIndex='{{ index }}'
+            binddeleteIndex='deletePhoto'>
+          </pet-photo>
+          <pet-video
+            wx:else
+            top='{{ -190 }}'
+            petVideoData='{{ item }}'
+            petVideoIndex='{{ index }}'
+            binddeleteIndex='deletePhoto'>
+          </pet-video>
+        </view>
+        <view class='pet-photo-item'>
+          <image src='{{ iconImg }}'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='grow-add-trips'>
+    <text>*添加单次成长经历不能超过5张图片或视频</text>
+  </view>
+</view>
+<view class='pet-common-btn' bindtap='addPetGrow'>
+  <text>提交</text>
+</view>
